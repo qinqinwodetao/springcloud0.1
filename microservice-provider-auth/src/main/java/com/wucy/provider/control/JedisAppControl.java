@@ -1,0 +1,51 @@
+package com.wucy.provider.control;
+
+import com.wucy.provider.dao.JedisDao;
+import com.wucy.provider.entity.Jedis;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+/**
+ * Created by wucy on 2017/6/15.
+ */
+
+@RestController
+@RequestMapping(value = "/jedisApp")
+public class JedisAppControl {
+
+    @Autowired
+    private JedisDao jedisDao;
+
+
+    @Value("${jedis.ip}")
+    private String jedisIp;
+
+    @Value("${jedis.port}")
+    private String jedisPort;
+
+    @GetMapping(value = "/jedisHello")
+    public String jedisHello(){
+
+        return  "jedisIp:" + jedisIp + "||" + "jedisPort：" + jedisPort;
+
+    }
+
+    @GetMapping(value = "/jedis/{id}")
+    public Jedis getJedisById(@PathVariable Integer id){
+        return jedisDao.findOne(id);
+
+    }
+
+
+    @PostMapping(value = "getJedis")
+    public List<Jedis> getJedis(){
+
+
+        return  jedisDao.findAll();
+    }
+
+
+}

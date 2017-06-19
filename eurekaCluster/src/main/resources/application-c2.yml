@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: eurekaCluster2
+server:
+  port: 8762
+eureka:
+  instance:
+    hostname: cluster2
+  client:
+    serviceUrl:
+      defaultZone: http://cluster1:8761/eureka/
