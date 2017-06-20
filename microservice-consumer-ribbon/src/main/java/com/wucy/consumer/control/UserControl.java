@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,15 +18,17 @@ import org.springframework.web.client.RestTemplate;
  */
 @RestController
 @RequestMapping(value = "/user")
+@RibbonClient(name = "microservice-provider")
 public class UserControl {
 
     @Autowired
     private LoadBalancerClient loadBalancerClient;
 
+
     @GetMapping(value = "/{id}")
     public User getUserById(@PathVariable Integer id){
 
-        return this.restTemplate().getForObject("http://MICROSERVICE-PROVIDER/user/" + id, User.class);
+        return this.restTemplate().getForObject("http://microservice-provider/user/" + id, User.class);
     }
 
 
