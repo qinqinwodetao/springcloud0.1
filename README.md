@@ -1,6 +1,6 @@
-# springcloud
+# springCloud
 
-2017-06-01开始学习springcloud学习过程过程中的demo简单整理说明
+2017-06-01开始学习springCloud学习过程过程中的demo简单整理说明
 
 ## Eureka 
 1. server 服务注册与发现
