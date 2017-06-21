@@ -23,6 +23,7 @@
         <module>/microservice-consumer-feign</module>
         <module>/microservice-consumer-feign-customizing</module>
         <module>/microservice-consumer-ribbon</module>
+        <module>/microservice-consumer-ribbon-hystrix</module>
         <module>/microservice-provider</module>
         <module>/microservice-provider-auth</module>
     </modules>
