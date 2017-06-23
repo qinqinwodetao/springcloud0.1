@@ -13,5 +13,7 @@
 Netflix 开源的一个延迟和容错库
 
 
+##URLs
 
-[google]: https://www.google.co.id/?gws_rd=cr,ssl&ei=Un5MWY-fLonzvATvqZ_ABg
+
+[hystrix dashboard](http://localhost:7006/hystrix "hystrix dashboard")
