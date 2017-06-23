@@ -16,14 +16,17 @@
     </parent>
 
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+
     <modules>
-        <module>eureka</module>
-        <module>eurekaClient</module>
         <module>eurekaCluster</module>
         <module>microservice-consumer-feign</module>
         <module>microservice-consumer-feign-hystrix</module>
         <module>microservice-consumer-feign-hystrix-dashboard</module>
-        <module>microservice-consumer-feign-customizing</module>
         <module>microservice-consumer-ribbon</module>
         <module>microservice-consumer-ribbon-hystrix</module>
         <module>microservice-provider</module>
@@ -45,6 +48,16 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 
 

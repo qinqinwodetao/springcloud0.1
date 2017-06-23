@@ -2,16 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>microservice-consumer-feign-hystrix-dashboard</artifactId>
+    <version>1-SNAPSHOT</version>
+    <name>microservice-consumer-feign-hystrix-dashboard</name>
+
+
     <parent>
         <artifactId>springcloud</artifactId>
         <groupId>com.wucy</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>microservice-consumer-feign-hystrix-dashboard</artifactId>
-
-    <name>microservice-consumer-feign-hystrix-dashboard</name>
 
     <dependencies>
         <!-- actuator是spring boot提供的对应用系统的自省和监控的集成功能，可以对应用系统进行配置查看、相关功能统计等 -->

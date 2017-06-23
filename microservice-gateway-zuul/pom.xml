@@ -2,16 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>microservice-gateway-zuul</artifactId>
+    <version>1-SNAPSHOT</version>
+    <name>microservice-gateway-zuul</name>
+
     <parent>
         <artifactId>springcloud</artifactId>
         <groupId>com.wucy</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>microservice-gateway-zuul</artifactId>
-
-    <name>microservice-gateway-zuul</name>
 
 
     <dependencies>
@@ -24,8 +25,6 @@
             <artifactId>spring-cloud-starter-zuul</artifactId>
         </dependency>
 
-
-
         <!-- actuator是spring boot提供的对应用系统的自省和监控的集成功能，可以对应用系统进行配置查看、相关功能统计等 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -36,14 +35,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-
-
     </dependencies>
-
-
-
-
-
 
 
 </project>
