@@ -24,7 +24,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @RequestMapping(value = "/user")
 //@RibbonClient(name = "microservice-provider")
-public class UserControl extends BaseController {
+public class UserControl {
 
     private static final Logger logger = LoggerFactory.getLogger(UserControl.class);
 

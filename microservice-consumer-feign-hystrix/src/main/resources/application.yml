@@ -1,0 +1,44 @@
+jedis:
+    ip: 127.0.0.1
+    port: 6379
+
+server:
+  port: 7005
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://cluster1:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+
+logging:
+  level: debug
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useSSL=true&verifyServerCertificate=false
+    username: root
+    password: 123456
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  application:
+    name: consumer-feign-hystrix-client
+
+
+
+info:
+  app:
+  name: wucy
+  encoding: @project.build.sourceEncoding@
+  java:
+    source: @java.version@
+    target: @java.version@
+  spring:
+    source: @spring.version@
+    target: @spring.version@
+
+
