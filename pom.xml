@@ -17,16 +17,34 @@
 
 
     <modules>
-        <module>/eureka</module>
-        <module>/eurekaClient</module>
-        <module>/eurekaCluster</module>
-        <module>/microservice-consumer-feign</module>
-        <module>/microservice-consumer-feign-customizing</module>
-        <module>/microservice-consumer-ribbon</module>
-        <module>/microservice-consumer-ribbon-hystrix</module>
-        <module>/microservice-provider</module>
-        <module>/microservice-provider-auth</module>
+        <module>eureka</module>
+        <module>eurekaClient</module>
+        <module>eurekaCluster</module>
+        <module>microservice-consumer-feign</module>
+        <module>microservice-consumer-feign-hystrix</module>
+        <module>microservice-consumer-feign-hystrix-dashboard</module>
+        <module>microservice-consumer-feign-customizing</module>
+        <module>microservice-consumer-ribbon</module>
+        <module>microservice-consumer-ribbon-hystrix</module>
+        <module>microservice-provider</module>
+        <module>microservice-provider-auth</module>
+        <module>microservice-gateway-zuul</module>
+
     </modules>
+
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Brixton.SR7</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 
 

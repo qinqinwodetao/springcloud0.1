@@ -1,12 +1,13 @@
 package com.wucy.consumer;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * Created by wucy on 2017/6/15.
@@ -18,6 +19,13 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
 @EnableHystrix
 @EnableCircuitBreaker
 public class ConsumerRibbonHystrixApplication {
+
+
+    @Bean
+    @LoadBalanced
+    public RestTemplate restTemplate(){
+        return new RestTemplate();
+    }
 
 
     public static void main(String[] args) {

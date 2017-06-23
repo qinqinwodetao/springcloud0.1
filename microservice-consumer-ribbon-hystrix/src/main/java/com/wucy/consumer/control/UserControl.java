@@ -1,6 +1,7 @@
 package com.wucy.consumer.control;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.netflix.ribbon.proxy.annotation.Hystrix;
 import com.wucy.consumer.entity.User;
 import org.slf4j.Logger;
@@ -22,8 +23,8 @@ import org.springframework.web.client.RestTemplate;
  */
 @RestController
 @RequestMapping(value = "/user")
-@RibbonClient(name = "microservice-provider")
-public class UserControl {
+//@RibbonClient(name = "microservice-provider")
+public class UserControl extends BaseController {
 
     private static final Logger logger = LoggerFactory.getLogger(UserControl.class);
 
@@ -31,17 +32,23 @@ public class UserControl {
     @Autowired
     private LoadBalancerClient loadBalancerClient;
 
-    @HystrixCommand(fallbackMethod = "getUserByIdFallback")
+
+    @Autowired
+    private RestTemplate restTemplate;
+
+
     @GetMapping(value = "/{id}")
+    @HystrixCommand(fallbackMethod = "getUserByIdFallback")
     public User getUserById(@PathVariable Integer id){
 
-        return this.restTemplate().getForObject("http://microservice-provider/user/" + id, User.class);
+       //return this.restTemplate().getForObject("http://microservice-provider/user/" + id, User.class);
+        return restTemplate.getForObject("http://microservice-provider/user/" + id, User.class);
     }
 
 
     @GetMapping(value = "/hello")
     public String hello(){
-        return sayGoogle();
+        return "hello";
     }
 
 
@@ -55,27 +62,20 @@ public class UserControl {
     }
 
 
-    @Bean
-    @LoadBalanced
-    public RestTemplate restTemplate(){
-        return new RestTemplate();
-    }
 
 
-    public String getUserByIdFallback(Integer id,Throwable throwable){
+    public User getUserByIdFallback(@PathVariable Integer id){
         User user = new User();
         user.setId(-1);
         user.setUserName("fallback");
         user.setPassword("88888888");
 
-        logger.error("getUserByIdFallback error & id is " + id ,throwable);
-        return "88888";
+        logger.error("getUserByIdFallback error & id is " + id );
+        return user;
     }
 
 
-    public String sayGoogle(){
-        return "googles";
-    }
+
 
 
 }
