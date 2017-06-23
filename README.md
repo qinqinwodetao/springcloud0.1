@@ -16,4 +16,4 @@ Netflix 开源的一个延迟和容错库
 ##URLs
 
 
-[hystrix dashboard](http://localhost:7006/hystrix "hystrix dashboard")
+[hystrix dashboard http://localhost:7006/hystrix ](http://localhost:7006/hystrix "hystrix dashboard")
