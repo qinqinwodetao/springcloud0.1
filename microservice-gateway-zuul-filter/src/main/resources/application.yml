@@ -1,0 +1,34 @@
+jedis:
+    ip: 127.0.0.1
+    port: 6379
+
+server:
+  port: 6002
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://cluster1:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+
+
+spring:
+  application:
+    name: microservice-gateway-zuul-filter
+
+
+
+info:
+  app:
+  name: wucy
+  encoding: @project.build.sourceEncoding@
+  java:
+    source: @java.version@
+    target: @java.version@
+  spring:
+    source: @spring.version@
+    target: @spring.version@
+logging:
+  level: debug

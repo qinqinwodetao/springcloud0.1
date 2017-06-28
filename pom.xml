@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.4.RELEASE</version>
+        <version>1.5.3.RELEASE</version>
     </parent>
 
 
@@ -32,7 +32,10 @@
         <module>microservice-provider</module>
         <module>microservice-provider-auth</module>
         <module>microservice-gateway-zuul</module>
-
+        <module>microservice-gateway-zuul-filter</module>
+        <module>microservice-gateway-zuul-fallback</module>
+        <!--zull 聚合微服务-->
+        <module>microservice-gateway-zuul-aggregation</module>
     </modules>
 
 
@@ -42,7 +45,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Brixton.SR7</version>
+                <version>Dalston.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
