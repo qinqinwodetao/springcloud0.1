@@ -1,37 +1,5 @@
-jedis:
-    ip: 127.0.0.1
-    port: 6379
-
 server:
   port: 8002
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://cluster1:8761/eureka/
-  instance:
-    hostname: microservice-provider
-    prefer-ip-address: true
-    secure-virtual-host-name: microservice-provider
-
-
-logging:
-  level: debug
-spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/test?useSSL=true&verifyServerCertificate=false
-    username: root
-    password: 123456
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-  application:
-    name: microservice-provider
-
-
-
 info:
   app:
   name: wucy
@@ -42,3 +10,9 @@ info:
   spring:
     source: @spring.version@
     target: @spring.version@
+logging:
+  level: debug
+
+
+
+

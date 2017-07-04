@@ -24,6 +24,7 @@
 
     <modules>
         <module>eurekaCluster</module>
+        <module>microservice-config-server</module>
         <module>microservice-consumer-feign</module>
         <module>microservice-consumer-feign-hystrix</module>
         <module>microservice-consumer-feign-hystrix-dashboard</module>
@@ -37,7 +38,6 @@
         <!--zull 聚合微服务-->
         <module>microservice-gateway-zuul-aggregation</module>
     </modules>
-
 
 
     <dependencyManagement>
