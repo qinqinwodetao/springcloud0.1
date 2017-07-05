@@ -1,7 +1,7 @@
-package com.wucy.client.control;
+package com.wucy.provider.control;
 
-import com.wucy.client.dao.UserDao;
-import com.wucy.client.entity.User;
+import com.wucy.provider.dao.UserDao;
+import com.wucy.provider.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

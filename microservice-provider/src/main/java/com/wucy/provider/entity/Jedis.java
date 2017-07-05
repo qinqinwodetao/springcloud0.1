@@ -1,4 +1,4 @@
-package com.wucy.client.entity;
+package com.wucy.provider.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

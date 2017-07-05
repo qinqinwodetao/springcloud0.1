@@ -1,7 +1,7 @@
-package com.wucy.client.control;
+package com.wucy.provider.control;
 
-import com.wucy.client.dao.JedisDao;
-import com.wucy.client.entity.Jedis;
+import com.wucy.provider.dao.JedisDao;
+import com.wucy.provider.entity.Jedis;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;

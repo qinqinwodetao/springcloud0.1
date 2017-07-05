@@ -1,6 +1,6 @@
-package com.wucy.client.dao;
+package com.wucy.provider.dao;
 
-import com.wucy.client.entity.User;
+import com.wucy.provider.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
