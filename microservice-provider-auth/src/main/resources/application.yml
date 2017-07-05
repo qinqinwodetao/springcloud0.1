@@ -10,9 +10,9 @@ eureka:
     serviceUrl:
       defaultZone: http://cluster1:8761/eureka/
   instance:
-    hostname: microservice-provider
+    hostname: microservice-client
     prefer-ip-address: true
-    secure-virtual-host-name: microservice-provider
+    secure-virtual-host-name: microservice-client
 
 
 logging:
@@ -28,7 +28,7 @@ spring:
     hibernate:
       ddl-auto: update
   application:
-    name: microservice-provider
+    name: microservice-client
 
 
 

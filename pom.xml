@@ -7,6 +7,8 @@
     <groupId>com.wucy</groupId>
     <artifactId>springcloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
+
     <packaging>pom</packaging>
 
     <parent>
@@ -37,7 +39,19 @@
         <module>microservice-gateway-zuul-fallback</module>
         <!--zull 聚合微服务-->
         <module>microservice-gateway-zuul-aggregation</module>
+        <module>microservice-config-client</module>
     </modules>
+
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
 
 
     <dependencyManagement>

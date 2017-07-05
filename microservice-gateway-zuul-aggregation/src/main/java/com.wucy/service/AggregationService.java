@@ -27,7 +27,7 @@ public class AggregationService {
 
 
         return Observable.create(observer -> {
-            User user = restTemplate.getForObject("http://microservice-provider/user/{id}",User.class,id);
+            User user = restTemplate.getForObject("http://microservice-client/user/{id}",User.class,id);
             observer.onNext(user);
             observer.onCompleted();
         });

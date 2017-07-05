@@ -1,14 +1,14 @@
 spring:
   application:
-    name: microservice-provider
+    name: microservice-config-client
   cloud:
     config:
       uri: http://127.0.0.1:8080/
       profile: dev
       label: dev
       discovery:
-           enabled: true
-           service-id: microservice-config-server
+        enabled: true
+        service-id: microservice-config-server
   rabbitmq:
     host: 127.0.0.1
     port: 5672

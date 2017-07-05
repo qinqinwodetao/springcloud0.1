@@ -23,7 +23,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @RestController
 @RequestMapping(value = "/user")
-//@RibbonClient(name = "microservice-provider")
+//@RibbonClient(name = "microservice-client")
 public class UserControl {
 
     private static final Logger logger = LoggerFactory.getLogger(UserControl.class);
@@ -42,7 +42,7 @@ public class UserControl {
     public User getUserById(@PathVariable Integer id){
 
        //return this.restTemplate().getForObject("http://microservice-provider/user/" + id, User.class);
-        return restTemplate.getForObject("http://microservice-provider/user/" + id, User.class);
+        return restTemplate.getForObject("http://microservice-client/user/" + id, User.class);
     }
 
 

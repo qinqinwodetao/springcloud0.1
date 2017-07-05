@@ -18,7 +18,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @RestController
 @RequestMapping(value = "/user")
-@RibbonClient(name = "microservice-provider")
+@RibbonClient(name = "microservice-client")
 public class UserControl {
 
     @Autowired
@@ -28,7 +28,7 @@ public class UserControl {
     @GetMapping(value = "/{id}")
     public User getUserById(@PathVariable Integer id){
 
-        return this.restTemplate().getForObject("http://microservice-provider/user/" + id, User.class);
+        return this.restTemplate().getForObject("http://microservice-client/user/" + id, User.class);
     }
 
 
