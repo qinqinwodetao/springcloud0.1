@@ -1,6 +1,1 @@
-logging:
-  level:
-    root: info
-
-
-
+#服务注册不可用 config server

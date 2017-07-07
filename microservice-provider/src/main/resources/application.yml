@@ -1,5 +1,4 @@
-server:
-  port: 8002
+
 info:
   app:
   name: wucy

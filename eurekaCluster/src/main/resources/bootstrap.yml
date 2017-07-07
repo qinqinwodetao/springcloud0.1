@@ -1,0 +1,40 @@
+logging:
+  level:
+    root: info
+spring:
+  application:
+    name: eureka-server-cluster
+---
+spring:
+  profiles: c1
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://cluster2:8762/eureka/
+---
+spring:
+  profiles: c2
+
+server:
+  port: 8762
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://cluster1:8761/eureka/
+
+---
+spring:
+  profiles: c3
+
+server:
+  port: 8763
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://cluster1:8761/eureka/,http://cluster2:8762/eureka/
