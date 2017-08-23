@@ -14,7 +14,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://cluster2:8762/eureka/
+      defaultZone: http://localhost:8762/eureka/
 ---
 spring:
   profiles: c2
@@ -25,7 +25,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://cluster1:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
 
 ---
 spring:
@@ -37,4 +37,4 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://cluster1:8761/eureka/,http://cluster2:8762/eureka/
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/

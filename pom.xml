@@ -55,6 +55,8 @@
             <scope>test</scope>
         </dependency>
 
+
+
     </dependencies>
 
 
@@ -63,7 +65,7 @@
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
+                    <artifactId>spring-cloud-dependencies</artifactId>
                 <version>Dalston.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
